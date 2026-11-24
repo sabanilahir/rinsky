@@ -1,0 +1,26 @@
+{
+  "id": "/",
+  "name": "Rinsky Pesanan Kue",
+  "short_name": "Rinsky Kue",
+  "description": "Aplikasi Pencatatan Pesanan Kue & Snack Box @rinsky_id",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#f59e0b",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ]
+}
