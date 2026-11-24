@@ -1,32 +1,48 @@
-# React + TypeScript + Vite
+# Rinsky Order App (@rinsky_id)
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fsabanilahir%2Frinsky)
 
-Currently, two official plugins are available:
+Aplikasi pencatatan pesanan mobile khusus untuk **@rinsky_id (Rinsky Snack & Cake)**. Dirancang untuk memudahkan penjual kue mencatat pesanan harian, rekap produksi dapur, mencetak faktur/invoice, serta memantau status pembayaran (Lunas / DP / Belum Bayar) langsung dari layar HP.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🚀 Deploy ke Vercel (1-Klik)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Klik tombol di bawah untuk langsung men-deploy aplikasi ini ke Vercel secara gratis:
 
-## Expanding the Oxlint configuration
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fsabanilahir%2Frinsky)
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+Setelah di-deploy ke Vercel, buka link `https://...` di Google Chrome HP Android Anda, lalu tekan **Titik Tiga ➔ "Instal Aplikasi"** untuk memasangnya langsung ke daftar aplikasi HP Anda!
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+---
+
+## ✨ Fitur Utama
+
+1. **Smart Paste (Input Kilat dari Chat WhatsApp)**
+   - Cukup salin teks pesanan dari chat WhatsApp / buku catatan, sistem otomatis mengekstrak tanggal, jam pengiriman, nama pemesan, lokasi, dan rincian kuenya.
+2. **Deteksi Nama Singkatan Kue (Alias Matcher)**
+   - Mengenali singkatan kue secara otomatis: `Sosol` ➔ Sosis solo, `Ragout` ➔ Risol Ragout, `Mercon` ➔ Risol Mercon, `Brownis milo` ➔ Brownis Cup, `Ketan serundeng` ➔ Ketan srundeng, `Martabak mix` ➔ Martabak manis, `Talam` ➔ Kue talam, `Lemper` ➔ Lemper ayam.
+3. **Rekap Dapur Produksi (Kitchen Board)**
+   - Merangkum total fisik kue yang wajib dibuat pada hari tersebut (termasuk isi nampan dan dus).
+   - Dilengkapi checklist dapur dan tombol **"Kirim Rekap ke WA Dapur"**.
+4. **Faktur / Invoice Resmi & Pelacakan Pembayaran**
+   - Nomor Faktur otomatis, kop usaha `@rinsky_id`, tabel rincian item, dan stempel status visual (Lunas / DP / Belum Bayar).
+   - Tombol **Cetak / Download PDF** dan tombol **Kirim Faktur ke WhatsApp**.
+5. **Master Pricelist & Omset Harian**
+   - Daftar harga resmi Snack Asin, Manis, dan Tradisional yang bisa diedit atau ditambah kapan saja.
+   - Perhitungan total omset harian, uang masuk, dan piutang.
+
+---
+
+## 🛠️ Menjalankan Secara Lokal
+
+```bash
+# Install dependensi
+npm install
+
+# Jalankan server lokal
+npm run dev
+
+# Build untuk produksi
+npm run build
 ```
-
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
